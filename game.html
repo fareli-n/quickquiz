@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/game.css">
+    <script src="./js/game.js "  type="module" ></script>
+</head>
+<body>
+    <main>
+        <div class="loader"></div> 
+        <div class="container hidden">
+            <div class="header">
+                <div class="progress-container">
+                    <div class="progressbar">
+                        <div class="progressbar-full"></div>
+                    </div>
+                    <div class="progress-count"></div>
+                </div>
+                <div class="score-container">
+                    <p>Score </p><span class="score-text">: 0</span>
+                </div>
+            </div>
+            <div class="game flow">
+                <h2 class="question"></h2>
+                <div class="choice-container flow" style="--flow-gap:0.62em">
+                    <div class="choice ">
+                        <p class="choice-text" data-number="0"></p>
+                        <span data-number="0"></span>
+                    </div>
+                    <div class="choice ">
+                        <p class="choice-text" data-number="1"></p>
+                        <span data-number="1"></span>
+
+                    </div>
+                    <div class="choice ">
+                        <p class="choice-text" data-number="2"></p>
+                        <span data-number="2"></span>
+                    </div>
+                    <div class="choice ">
+                        <p class="choice-text" data-number="3"></p>
+                        <span data-number="3"></span>
+                    </div>
+                </div>
+                <button id="next" type="button" class="btn">Next</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: 37, 44, 74;
+  /* secondary : #1E90FF; */
+  --secondary: 21, 105, 186;
+  --accent: 52, 152, 219;
+
+  --success: 0, 200, 81;
+  --error: 255, 68, 68;
+
+  --dark: #171717;
+  --light: #ffffff;
+  --size: 85%;
+  --flow-gap: 1em;
+  --containerWidth: 23.25rem;
+}
+
+h1,
+h2,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+select,
+input {
+  font-family: inherit;
+}
+button,
+a {
+  font-family: inherit;
+  color: var(--light);
+  font-size: 1.25rem;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", "sans-serif";
+  color: var(--light);
+  background: -moz-radial-gradient(
+    circle at 10% 12%,
+    rgba(37, 44, 74, 1) 0%,
+    rgba(21, 105, 186, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle at 10% 12%,
+    rgba(37, 44, 74, 1) 0%,
+    rgba(21, 105, 186, 1) 100%
+  );
+  background: -o-radial-gradient(
+    circle at 10% 12%,
+    rgba(37, 44, 74, 1) 0%,
+    rgba(21, 105, 186, 1) 100%
+  );
+  background: -ms-radial-gradient(
+    circle at 10% 12%,
+    rgba(37, 44, 74, 1) 0%,
+    rgba(21, 105, 186, 1) 100%
+  );
+  background: radial-gradient(
+    circle at 10% 12%,
+    rgba(37, 44, 74, 1) 0%,
+    rgba(21, 105, 186, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.5; /* default is : 1.2 */
+  font-size: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+}
+.flow > * + * {
+  margin-top: var(--flow-gap);
+}
+
+.container {
+  width: 90%;
+  max-width: var(--containerWidth);
+  /* height: 100vh; */
+  /* margin: 0.5em auto; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.container>*:last-child{
+    margin-bottom: 0.5em;
+}
+form {
+  width: var(--size);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form > select,
+form > input {
+  font-size: 1.25rem;
+  text-indent: 0.25rem;
+  width: 100%;
+  padding: 0.6em 25px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+  /* background-color: #4d5061; */
+  border: none;
+  border-radius: 5px;
+}
+.btn {
+  width: var(--size);
+  padding: 0.6em 25px;
+  color: var(--light);
+  background-color: rgba(var(--secondary));
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease-in;
+  outline: none;
+}
+
+.btn:visited,
+.btn:any-link {
+  color: var(--light);
+  background: rgba(var(--secondary));
+}
+.btn:hover,
+.btn:focus {
+  background: rgba(var(--secondary), 0.8);
+  transform: translate(-0.0625rem);
+  cursor: pointer;
+}
+/* .btn:active {
+} */
+.hidden {
+  display: none;
+}
+@media only screen and (min-width: 54rem) {
+  :root {
+    --containerWidth: 43.75rem;
+  }
+
+  body,
+  button,
+  a,
+  select,
+  input {
+    font-size: 1.5rem;
+  }
+}
+.loader {
+  margin: 0 auto;
+  width: 6.5rem;
+  aspect-ratio: 1/1;
+  border: 1rem solid white;
+  border-top: 1rem solid rgba(var(--accent), 1);
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.alert{
+    margin: 0 auto;
+    background-color: white;
+    border : none;
+    border-radius: 5px ;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color :rgba(var(--primary));
+    opacity:0;
+    position: fixed;
+    width: 350px;
+    height: 150px;
+     top:30%;
+     left:50%;
+    transform: translateX(-50%);
+    /* transition: transform .2s ease-in-out; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.alert > * {
+    margin : 0.35em 0.25em;
+}
+.alert.open {
+    z-index: 999;
+    opacity: 1;
+}
+.alert button {
+    --size: 65%;
+}
+.alert p{
+    font-size: 1.5rem;
+}

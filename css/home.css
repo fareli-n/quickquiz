@@ -1,0 +1,20 @@
+h1 {
+  /* margin-top: 1em; */
+  padding: 0.5em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 3rem; /*48px;*/
+  font-weight: 700;
+}
+.category-error {
+  margin : 0.25em 0;
+  color : rgba(var(--error));
+  display: block;
+
+}
+@media only screen and (min-width: 54rem) {
+  h1 { 
+    font-size: 4rem;
+  }
+}
+
+

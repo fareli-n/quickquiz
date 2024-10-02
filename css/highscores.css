@@ -1,0 +1,37 @@
+h1 {
+  font-size: 2.5rem;
+  margin-top: 2.5rem;
+  padding: 0.25em 0.5em;
+  letter-spacing: 0.05em;
+}
+.scores-container {
+  width: var(--size);
+  text-align: start;
+  /* padding: 1em;   */
+  /* border: 2px solid red; */
+}
+.scores-container_rows {
+  width: 100%;
+  font-size: 1.25rem;
+  background: rgba(var(--primary), 0.3);
+  border: 2px solid rgba(var(--secondary), 0.5);
+  border-radius: 20px;
+  padding: 0.5em 0.5em 0.5em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  transition: all 0.1s ease-in;
+}
+.scores-text {
+  flex: 1;
+}
+
+.scores-container_rows:hover {
+  background: rgba(var(--secondary), 0.5);
+  transform: translate(-0.0625rem);
+}
+.scores-container_rows:first-child {
+  background: rgba(var(--success), 0.3);
+
+}

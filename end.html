@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/end.css" />
+    <script src="./js/end.js" defer></script>
+  </head>
+  <body onload="loadPage()">
+    <main>
+      <div class="loader"></div>
+      <div class="container flow" style="display: none">
+        <h1 class="end-message"></h1>
+        <h2>your score</h2>
+        <div class="end-score"></div>
+        <form class="flow">
+          <input
+            id="username"
+            type="text"
+            name="username"
+            placeholder="Enter your name"
+          />
+          <button
+            id="goHome"
+            onclick="saveGoHome(event)"
+            type="submit"
+            class="btn"
+            style="--size: 100%"
+          >
+            Save & Go home
+          </button>
+        </form>
+        <!-- <a href="./index.html" class="btn">Home</a> -->
+      </div>
+    </main>
+  </body>
+</html>

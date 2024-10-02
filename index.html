@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Challenge your knowledge with engaging quizzes across various topics. Ready to test your wits? Dive into Quick Quiz today!">
+    <title>Quick Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <script src="./js/home.js" defer></script>
+  </head>
+  <body onload="loadPage()">
+    <main>
+      <div class="loader"></div>
+      <div class="container flow" style="display: none">
+        <h1>QUICK QUIZ!</h1>
+        <form class="flow">
+          <select id="category">
+            <option value="" selected>Choose a Category</option>
+            <option value="9">General Knowledge</option>
+            <option value="17">Science & Nature</option>
+            <option value="18">Science: Computers</option>
+            <option value="22">Geography</option>
+            <option value="23">History</option>
+            <option value="27">Animals</option>
+            <option value="28">Vehicles</option>
+          </select>
+          <div id="error-massage" class="hidden"></div>
+          <button
+            id="category-botton"
+            onclick="initGame(event)"
+            class="btn"
+            type="submit"
+            style="--size: 100%"
+          >
+            Play
+          </button>
+        </form>
+        <a class="btn" href="./highscores.html">High Scores</a>
+      </div>
+    </main>
+  </body>
+</html>
